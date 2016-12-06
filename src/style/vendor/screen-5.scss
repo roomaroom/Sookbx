@@ -1,6 +1,29 @@
 .screen-5 {
 	background-color: $grey;
+	padding: 20px 0;
 	.copyright {
-		margin: 50px 0 20px;
+		margin: 50px 0 0;
+	}
+	.title {
+		color: $main;
+		font-size: 1.3rem;
+		line-height: 1.4rem;
+		margin-bottom: 30px;
+	}
+	.text {
+		font-size: .6rem;
+		line-height: .8rem;
+		margin-bottom: 30px;
+	}
+	.form-group {
+		label {
+			display: block;
+		}
+		input {
+			background-color: transparent;
+			border: none;
+			border-bottom: 1px solid $main;
+			width: 100%;
+		}
 	}
 }

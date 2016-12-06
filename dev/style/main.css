@@ -5818,6 +5818,47 @@ body {
 p {
   margin: 0; }
 
+.socials .social {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0 5px;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out; }
+  .socials .social.facebook {
+    background-color: #235b9e;
+    background-image: url("../img/fb.png"); }
+    .socials .social.facebook:hover {
+      background-color: #1e4f89; }
+  .socials .social.twitter {
+    background-color: #00abe3;
+    background-image: url("../img/twitter.png"); }
+    .socials .social.twitter:hover {
+      background-color: #0098ca; }
+  .socials .social.in {
+    background-color: #0074b5;
+    background-image: url("../img/in.png"); }
+    .socials .social.in:hover {
+      background-color: #00649c; }
+  .socials .social.vimeo {
+    background-color: #00b2de;
+    background-image: url("../img/vimeo.png"); }
+    .socials .social.vimeo:hover {
+      background-color: #009ec5; }
+  .socials .social.youtube {
+    background-color: #ff4d3f;
+    background-image: url("../img/youtube.png"); }
+    .socials .social.youtube:hover {
+      background-color: #ff3526; }
+
+.socials.on-top .social {
+  display: inline-block; }
+
 .screen-1 {
   background-color: #333333;
   color: #ffffff; }
@@ -5860,6 +5901,8 @@ p {
       position: absolute;
       bottom: -20px;
       left: 50%; }
+  .screen-3 .highlight {
+    color: #ff9900; }
   .screen-3 .text {
     font-size: 1rem;
     line-height: 1.2rem; }
@@ -5873,6 +5916,23 @@ p {
     background-color: #fff; }
 
 .screen-5 {
-  background-color: #f2f2f2; }
+  background-color: #f2f2f2;
+  padding: 20px 0; }
   .screen-5 .copyright {
-    margin: 50px 0 20px; }
+    margin: 50px 0 0; }
+  .screen-5 .title {
+    color: #ff9900;
+    font-size: 1.3rem;
+    line-height: 1.4rem;
+    margin-bottom: 30px; }
+  .screen-5 .text {
+    font-size: .6rem;
+    line-height: .8rem;
+    margin-bottom: 30px; }
+  .screen-5 .form-group label {
+    display: block; }
+  .screen-5 .form-group input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #ff9900;
+    width: 100%; }

@@ -1,3 +1,10 @@
 .screen-4 {
 	background-color: $grey;
+	padding: 60px 0 30px;
+	.info-sookbox {
+		@extend %shadow;
+		overflow: hidden;
+		height: 530px;
+		background-color: #fff;
+	}
 }

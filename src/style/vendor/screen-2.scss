@@ -1,3 +1,22 @@
 .screen-2 {
 	background-color: $light-text;
+	.introbox {
+		background-color: #4d4d4d;
+		color: $light-text;
+		padding: 90px 90px 150px;
+		// box-shadow: 0px 0px 40px 0px #666;
+		@extend %shadow;
+	}
+	.title {
+		font-size: .6rem;
+		line-height: .8rem;
+		text-transform: uppercase;
+		text-align: center;
+		font-weight: bold;
+		margin-bottom: 25px;
+	}
+	.text {
+		font-size: .6rem;
+		line-height: .8rem;
+	}
 }

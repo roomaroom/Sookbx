@@ -4,6 +4,7 @@
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
 html {
   font-family: sans-serif;
   /* 1 */
@@ -5805,17 +5806,71 @@ button.close {
     display: none !important; } }
 
 /*# sourceMappingURL=bootstrap.min.css.map */
+.screen-2 .introbox, .screen-4 .info-sookbox {
+  box-shadow: 0px 0px 40px 0px #666; }
+
+html {
+  font-size: 24px; }
+
+body {
+  font-family: 'Open Sans', sans-serif; }
+
+p {
+  margin: 0; }
+
 .screen-1 {
-  background-color: #333333; }
+  background-color: #333333;
+  color: #ffffff; }
 
 .screen-2 {
   background-color: #ffffff; }
+  .screen-2 .introbox {
+    background-color: #4d4d4d;
+    color: #ffffff;
+    padding: 90px 90px 150px; }
+  .screen-2 .title {
+    font-size: .6rem;
+    line-height: .8rem;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 25px; }
+  .screen-2 .text {
+    font-size: .6rem;
+    line-height: .8rem; }
 
 .screen-3 {
-  background-color: #ffffff; }
+  background-color: #ffffff;
+  padding: 130px 0 180px; }
+  .screen-3 .category {
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 30px; }
+  .screen-3 .title {
+    color: #ff9900;
+    font-size: 1.8rem;
+    position: relative;
+    margin-bottom: 50px;
+    font-weight: semibold; }
+    .screen-3 .title:first-letter {
+      text-transform: uppercase; }
+    .screen-3 .title:after {
+      color: #333333;
+      position: absolute;
+      bottom: -20px;
+      left: 50%; }
+  .screen-3 .text {
+    font-size: 1rem;
+    line-height: 1.2rem; }
 
 .screen-4 {
-  background-color: #f2f2f2; }
+  background-color: #f2f2f2;
+  padding: 60px 0 30px; }
+  .screen-4 .info-sookbox {
+    overflow: hidden;
+    height: 530px;
+    background-color: #fff; }
 
 .screen-5 {
   background-color: #f2f2f2; }

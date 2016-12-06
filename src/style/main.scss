@@ -2,14 +2,24 @@
 @import "vendor/normalize"; // Normalize by default instead reset
 @import "vendor/bootstrap.min"; // Normalize by default instead reset
 // @import "sprite/sprite"; // sprite icons @extend .icon-.....
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
 
 // Vars 
 $main: #ff9900;
 $light-text: #ffffff;
 $dark-text: #333333;
 $grey: #f2f2f2;
+%shadow {
+	box-shadow: 0px 0px 40px 0px #666;
+}
+html {
+	font-size: 24px;
+}
 body {
-	// font-family: 'Roboto', sans-serif;
+	font-family: 'Open Sans', sans-serif;
+}
+p {
+	margin: 0;
 }
 
 // screens

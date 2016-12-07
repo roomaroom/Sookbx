@@ -26,4 +26,17 @@
 			width: 100%;
 		}
 	}
+	.button {
+		margin-top: 50px;
+		@include transition;
+		border: 1px solid $main;
+		background-color: transparent;
+		height: 60px;
+		line-height: 60px;
+		@include radius(10px);
+		&:hover {
+			background-color: $main;
+			color: $light-text;
+		}
+	}
 }

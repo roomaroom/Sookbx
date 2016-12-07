@@ -1,10 +1,59 @@
 .screen-4 {
 	background-color: $grey;
 	padding: 60px 0 30px;
-	.info-sookbox {
+	.sookbox-info-cont {
+		position: relative;
+	}
+	.sookbox-info-bg {
 		@extend %shadow;
 		overflow: hidden;
 		height: 530px;
 		background-color: #fff;
+	}
+	.sookbox-info-tabs {
+		background-color: $main;
+		position: absolute;
+		left: 0;
+		top: -140px;
+		height: 630px;
+		z-index: 2;
+		box-sizing: border-box;
+		padding-top: 160px;
+		color: $light-text;
+		text-align: center;
+		.title {
+			font-weight: 700;
+			text-transform: uppercase;
+			font-size: .6rem;
+			margin-bottom: 80px;
+		}
+		.tab {
+			font-size: 1.8rem;
+			margin-bottom: 40px;
+			font-weight: 600;
+			cursor: pointer;
+			&:first-letter {
+				text-transform: uppercase;
+			}
+		}
+	}
+	.sookbox-info {
+		position: absolute;
+		overflow: hidden;
+		top: 0;
+		left: 0;
+		height: 530px;
+		// background-color: red;
+		z-index: 1;
+		// padding: 0;
+	}
+	.info-item {
+		width: calc( 100% + 35px );
+		height: 100%;
+		overflow-y: scroll;
+		display: none;
+		&.active {
+			display: block;
+		}
 	}
 }

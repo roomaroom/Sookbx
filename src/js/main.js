@@ -12,3 +12,13 @@
 // 	bodyText.innerHTML = bodyClass;
 // 	body.appendChild(bodyText);
 // })();
+$(document).ready(function(){
+	//tabs switch
+	var tabTrigger = $(".tabs").find(".tab"),
+	infoItem = $(".info-item");
+	tabTrigger.on("click", function(){
+		var tabData = $(this).data("tab");
+		infoItem.removeClass("active");
+		$("#" + tabData).addClass("active");
+	});
+});

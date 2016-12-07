@@ -5806,7 +5806,7 @@ button.close {
     display: none !important; } }
 
 /*# sourceMappingURL=bootstrap.min.css.map */
-.screen-2 .introbox, .screen-4 .info-sookbox {
+.screen-2 .introbox, .screen-4 .sookbox-info-bg {
   box-shadow: 0px 0px 40px 0px #666; }
 
 html {
@@ -5859,11 +5859,22 @@ p {
 .socials.on-top .social {
   display: inline-block; }
 
+.socials.fixed {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  z-index: 9; }
+  .socials.fixed .social {
+    display: block;
+    margin: 5px 0; }
+
 .screen-1 {
+  display: none;
   background-color: #333333;
   color: #ffffff; }
 
 .screen-2 {
+  display: none;
   background-color: #ffffff; }
   .screen-2 .introbox {
     background-color: #4d4d4d;
@@ -5874,7 +5885,7 @@ p {
     line-height: .8rem;
     text-transform: uppercase;
     text-align: center;
-    font-weight: bold;
+    font-weight: 700;
     margin-bottom: 25px; }
   .screen-2 .text {
     font-size: .6rem;
@@ -5886,14 +5897,14 @@ p {
   .screen-3 .category {
     font-size: 15px;
     text-transform: uppercase;
-    font-weight: bold;
+    font-weight: 700;
     margin-bottom: 30px; }
   .screen-3 .title {
     color: #ff9900;
     font-size: 1.8rem;
     position: relative;
     margin-bottom: 50px;
-    font-weight: semibold; }
+    font-weight: 600; }
     .screen-3 .title:first-letter {
       text-transform: uppercase; }
     .screen-3 .title:after {
@@ -5910,10 +5921,49 @@ p {
 .screen-4 {
   background-color: #f2f2f2;
   padding: 60px 0 30px; }
-  .screen-4 .info-sookbox {
+  .screen-4 .sookbox-info-cont {
+    position: relative; }
+  .screen-4 .sookbox-info-bg {
     overflow: hidden;
     height: 530px;
     background-color: #fff; }
+  .screen-4 .sookbox-info-tabs {
+    background-color: #ff9900;
+    position: absolute;
+    left: 0;
+    top: -140px;
+    height: 630px;
+    z-index: 2;
+    box-sizing: border-box;
+    padding-top: 160px;
+    color: #ffffff;
+    text-align: center; }
+    .screen-4 .sookbox-info-tabs .title {
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: .6rem;
+      margin-bottom: 80px; }
+    .screen-4 .sookbox-info-tabs .tab {
+      font-size: 1.8rem;
+      margin-bottom: 40px;
+      font-weight: 600;
+      cursor: pointer; }
+      .screen-4 .sookbox-info-tabs .tab:first-letter {
+        text-transform: uppercase; }
+  .screen-4 .sookbox-info {
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    height: 530px;
+    z-index: 1; }
+  .screen-4 .info-item {
+    width: calc( 100% + 35px);
+    height: 100%;
+    overflow-y: scroll;
+    display: none; }
+    .screen-4 .info-item.active {
+      display: block; }
 
 .screen-5 {
   background-color: #f2f2f2;
@@ -5936,3 +5986,18 @@ p {
     border: none;
     border-bottom: 1px solid #ff9900;
     width: 100%; }
+  .screen-5 .button {
+    margin-top: 50px;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+    border: 1px solid #ff9900;
+    background-color: transparent;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 10px; }
+    .screen-5 .button:hover {
+      background-color: #ff9900;
+      color: #ffffff; }

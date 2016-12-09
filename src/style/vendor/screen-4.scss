@@ -21,6 +21,18 @@
 		padding-top: 160px;
 		color: $light-text;
 		text-align: center;
+		.arrow-down {
+			content: "";
+			background-image: url('../img/arrow-down.png');
+			cursor: pointer;
+			position: absolute;
+			top: 50px;
+			left: 50%;
+			width: 38px;
+			height: 38px;
+			margin-left: -19px;
+
+		}
 		.title {
 			font-weight: 700;
 			text-transform: uppercase;
@@ -34,6 +46,28 @@
 			cursor: pointer;
 			&:first-letter {
 				text-transform: uppercase;
+			}
+			span {
+				position: relative;
+				&:after {
+					content: "";
+					background-repeat: no-repeat;
+					background-image: url('../img/arrow-left.png');
+					width: 29px;
+					height: 28px;
+					display: block;
+					position: absolute;
+					left: -50px;
+					top: 50%;
+					margin-top: -14px;
+					opacity: 0;		
+					transform: translateX(20px);			
+				}
+			}
+			&.active span:after {
+				opacity: 1;
+				transform: translateX(0px);
+				@include transition;
 			}
 		}
 	}
@@ -52,8 +86,43 @@
 		height: 100%;
 		overflow-y: scroll;
 		display: none;
+		padding: 70px 90px;
+		box-sizing: border-box;
 		&.active {
 			display: block;
+		}
+		img {
+			display: block;
+			max-width: 100%;
+			margin: 20px auto;
+		}
+		.text {
+			font-size: .5rem;
+			line-height: .8rem;
+		}
+		.title {
+			font-size: 1rem;
+			line-height: 1.2rem;
+			text-transform: uppercase;
+			margin-bottom: 25px;
+			font-weight: 700;
+		}
+		.cat-title {
+			font-size: .5rem;
+			line-height: .8rem;
+			margin-bottom: 20px;
+			font-weight: 600;
+		}
+		a {
+			padding-left: 45px;
+			text-transform: uppercase;
+			display: block;
+			margin: 20px 0;
+			color: $dark-text;
+			text-decoration: none;
+			background-repeat: no-repeat;
+			background-position: 0 center;
+			background-image: url('../img/arrow-left-orange.png');
 		}
 	}
 }

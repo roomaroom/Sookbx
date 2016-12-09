@@ -17,7 +17,8 @@
 		<a href="#" target="blank" class="social youtube"></a>
 	</div>
 	<div class="screen screen-1">
-		<div class="header">
+		<div class="header container">
+			<img src="img/logo.png" alt="Logo" class="logo">
 			<div class="socials on-top">
 				<a href="#" target="blank" class="social facebook"></a>
 				<a href="#" target="blank" class="social twitter"></a>
@@ -35,15 +36,23 @@
 	</div>
 	<div class="screen screen-2">
 		<div class="container">
-			<div class="col-lg-5 col-lg-offset-1 introbox">
+			<div class="col-md-5 col-md-offset-1 introbox">
 				<div class="title">introducing:</div>
 				<p class="text">How do we get devices to communicate with each other? How do we govern our universe of content? How do we transform handhelds into controllers that send chosen media to desired output device? Sookbox answers these questions creating a new paradigm - a universal framework to connect and control media on all devices. Sookbox breaks from tradition in two ways: first to put a cloud in the home, and second to serve content and controls separately.</p>
 			</div>
+			<div class="col-md-5">
+				<div class="row">			
+					<img src="img/house.png" alt="">
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid screen-2-bg-cont">
+			<div class="col-md-6 screen-bg"></div>
 		</div>
 	</div>
 	<div class="screen screen-3">
 		<div class="container text-center">
-			<div class="col-lg-6 col-lg-offset-3">
+			<div class="col-md-6 col-md-offset-3">
 				<p class="category">patented</p>
 				<p class="title">innovation</p>
 				<p class="text">Sookbox broke the traditional linear paradigm of one controller connected to one device connected to one output with the invention of the Stream Runner. We separate content from control with a framework that enables consumers to play any media or apps on multiple outputs. This is novel. There are <span class="highlight">two patents</span> we were just awarded, as well as several provisional patents for corollary innovations.</p>
@@ -53,31 +62,53 @@
 	</div>
 	<div class="screen screen-4">
 		<div class="container sookbox-info-cont">
-			<div class="col-lg-9 col-lg-offset-1 sookbox-info-bg">
+			<div class="col-md-9 col-md-offset-1 sookbox-info-bg">
 			</div>
-			<div class="col-lg-5 col-lg-offset-6 sookbox-info-tabs">
+			<div class="col-md-5 col-md-offset-6 col-sm-12 sookbox-info-tabs">
+				<div class="arrow-down"></div>
 				<p class="title">learn more</p>
 				<div class="tabs">
-					<p class="tab" data-tab="patents">patents</p>
-					<p class="tab" data-tab="history">history</p>
-					<p class="tab" data-tab="media">media</p>
+					<p class="tab active" data-tab="patents"><span>patents</span></p>
+					<p class="tab" data-tab="history"><span>history</span></p>
+					<p class="tab" data-tab="media"><span>media</span></p>
 				</div>
 			</div>
-			<div class="col-lg-5 col-lg-offset-1 sookbox-info">
-				<div class="info-item active" id="patents">patents</div>
-				<div class="info-item" id="history">history</div>
-				<div class="info-item" id="media">media</div>
+			<div class="col-md-5 col-md-offset-1 sookbox-info">
+				<div class="info-item active" id="patents">
+					<p class="cat-title">Sookbox Patents</p>
+					<p class="title">proven innovation</p>
+					<p class="text">Sookbox has been issued patents that cover its innovative technology. The disclosure is broad, and includes novel concepts such as multi-directional feedback amongst various devices on a network, control of multiple devices from multiple handheld, and the treatment of connectivity information for discrete and non-discrete controllers. In the real-world, this technology is widely applicable to streaming devices, smart devices, dumb devices made smart, home automation and control, and the comprehensive Internet of Things.</p>
+					<a href="#">US Patent 9,503,486: Configuring, Networking, and Controlling a Plurality of Unique Network-Capable Devices</a>
+					<a href="#">US Patent 9,497,137: Digital Content Connectivity and Control via a Plurality of Controller that are Treated Discriminatively</a>
+					<p class="title">PATENT PUBLICATIONS</p>
+					<a href="#">Method and System for Providing Digital Content</a>
+					<a href="#">Digital Content Connectivity and Control via a Plurality of Controllers that are treated as a Single Controller</a>
+				</div>
+				<div class="info-item" id="history">
+					<p class="cat-title">Sookbox History</p>
+					<p class="title">The Father of Connectivity</p>
+					<p class="text">From its founding in 2011, Sookbox worked on designing the vessel to deliver its ground breaking technology. The Stream Runner, unveiled at CES 2013, was the predecessor to the streaming devices on the market today. Sookbox software on the user’s handheld communicates with the various Stream Runners in the network to control the delivery of content.</p> 
+					<img src="img/sookbox-img.jpg" alt="">
+				</div>
+				<div class="info-item" id="media">
+					<p class="cat-title">Sookbox Media</p>
+					<p class="title">VideoS</p>
+					<a href="#">Sneak Peek Into Sookbox's Digital Media Unleashed - Verizon MIT Meet-Up</a>
+					<a href="#">Sookbox presents at Boston New Technology</a>
+					<p class="title">ImageS</p>
+					<img src="img/cranston.jpg" alt="">
+				</div>
 			</div>
 		</div>
 	</div>
 	<div class="screen screen-5">
 		<div class="container">
-			<div class="contact-us col-lg-5 col-lg-offset-1">
+			<div class="contact-us col-md-5 col-md-offset-1">
 				<p class="title">Connect with us</p>
 				<p class="text">We’re innovating how you interact with everything around you. If you’d like to chat with us more about what we’re currently working on or if you’d like to write about us connect with us below:</p>
 				<p class="text"><a href="mailto:info@sookbox.com">info@sookbox.com</a></p>
 			</div>
-			<div class="form col-lg-5">
+			<div class="form col-md-5">
 				<p class="title">Stay up to date</p>
 				<p class="text">Sign up to stay up to date with our groundbreaking technology:</p>
 				<form action="">
@@ -89,13 +120,14 @@
 						<label for="">Email:</label>
 						<input type="email">
 					</div>
-					<button type="submit" class="button col-lg-6 col-lg-offset-6">Sign Up</button>
+					<button type="submit" class="button col-md-6 col-md-offset-6">Sign Up</button>
 				</form>
 			</div>
 			<div class="clearfix"></div>
 			<p class="copyright text-center">© Copyright 2013 Sookbox. All Rights Reserved.</p>
 		</div>
 	</div>
+	<div class="popup" id="popup"></div>
 	<script src="js/main.js"></script>
 	</body>
 	</html>

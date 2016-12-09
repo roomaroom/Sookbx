@@ -1,5 +1,8 @@
 .screen-1 {
-	display: none;
 	background-color: #333333;
 	color: $light-text;
+	padding-top: 50px;
+	.header {
+		display: flex;
+	}
 }

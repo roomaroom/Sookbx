@@ -1,6 +1,8 @@
 .screen-2 {
-	display: none;
+	// display: none;
 	background-color: $light-text;
+	background-color: $grey;
+	position: relative;
 	.introbox {
 		background-color: #4d4d4d;
 		color: $light-text;
@@ -19,5 +21,19 @@
 	.text {
 		font-size: .6rem;
 		line-height: .8rem;
+	}
+	.screen-2-bg-cont {
+		display: none;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		padding: 0;
+		.screen-bg {
+			padding: 0;
+			height: 100%;
+			background-color: #f0f;
+		}
 	}
 }

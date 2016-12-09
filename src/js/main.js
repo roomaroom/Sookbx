@@ -19,6 +19,8 @@ $(document).ready(function(){
 	tabTrigger.on("click", function(){
 		var tabData = $(this).data("tab");
 		infoItem.removeClass("active");
+		tabTrigger.removeClass("active");
+		$(this).addClass("active");
 		$("#" + tabData).addClass("active");
 	});
 });

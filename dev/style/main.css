@@ -5869,13 +5869,16 @@ p {
     margin: 5px 0; }
 
 .screen-1 {
-  display: none;
   background-color: #333333;
-  color: #ffffff; }
+  color: #ffffff;
+  padding-top: 50px; }
+  .screen-1 .header {
+    display: flex; }
 
 .screen-2 {
-  display: none;
-  background-color: #ffffff; }
+  background-color: #ffffff;
+  background-color: #f2f2f2;
+  position: relative; }
   .screen-2 .introbox {
     background-color: #4d4d4d;
     color: #ffffff;
@@ -5890,6 +5893,18 @@ p {
   .screen-2 .text {
     font-size: .6rem;
     line-height: .8rem; }
+  .screen-2 .screen-2-bg-cont {
+    display: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0; }
+    .screen-2 .screen-2-bg-cont .screen-bg {
+      padding: 0;
+      height: 100%;
+      background-color: #f0f; }
 
 .screen-3 {
   background-color: #ffffff;
@@ -5938,6 +5953,16 @@ p {
     padding-top: 160px;
     color: #ffffff;
     text-align: center; }
+    .screen-4 .sookbox-info-tabs .arrow-down {
+      content: "";
+      background-image: url("../img/arrow-down.png");
+      cursor: pointer;
+      position: absolute;
+      top: 50px;
+      left: 50%;
+      width: 38px;
+      height: 38px;
+      margin-left: -19px; }
     .screen-4 .sookbox-info-tabs .title {
       font-weight: 700;
       text-transform: uppercase;
@@ -5950,6 +5975,29 @@ p {
       cursor: pointer; }
       .screen-4 .sookbox-info-tabs .tab:first-letter {
         text-transform: uppercase; }
+      .screen-4 .sookbox-info-tabs .tab span {
+        position: relative; }
+        .screen-4 .sookbox-info-tabs .tab span:after {
+          content: "";
+          background-repeat: no-repeat;
+          background-image: url("../img/arrow-left.png");
+          width: 29px;
+          height: 28px;
+          display: block;
+          position: absolute;
+          left: -50px;
+          top: 50%;
+          margin-top: -14px;
+          opacity: 0;
+          transform: translateX(20px); }
+      .screen-4 .sookbox-info-tabs .tab.active span:after {
+        opacity: 1;
+        transform: translateX(0px);
+        -webkit-transition: all 0.3s ease-out;
+        -moz-transition: all 0.3s ease-out;
+        -ms-transition: all 0.3s ease-out;
+        -o-transition: all 0.3s ease-out;
+        transition: all 0.3s ease-out; }
   .screen-4 .sookbox-info {
     position: absolute;
     overflow: hidden;
@@ -5961,9 +6009,39 @@ p {
     width: calc( 100% + 35px);
     height: 100%;
     overflow-y: scroll;
-    display: none; }
+    display: none;
+    padding: 70px 90px;
+    box-sizing: border-box; }
     .screen-4 .info-item.active {
       display: block; }
+    .screen-4 .info-item img {
+      display: block;
+      max-width: 100%;
+      margin: 20px auto; }
+    .screen-4 .info-item .text {
+      font-size: .5rem;
+      line-height: .8rem; }
+    .screen-4 .info-item .title {
+      font-size: 1rem;
+      line-height: 1.2rem;
+      text-transform: uppercase;
+      margin-bottom: 25px;
+      font-weight: 700; }
+    .screen-4 .info-item .cat-title {
+      font-size: .5rem;
+      line-height: .8rem;
+      margin-bottom: 20px;
+      font-weight: 600; }
+    .screen-4 .info-item a {
+      padding-left: 45px;
+      text-transform: uppercase;
+      display: block;
+      margin: 20px 0;
+      color: #333333;
+      text-decoration: none;
+      background-repeat: no-repeat;
+      background-position: 0 center;
+      background-image: url("../img/arrow-left-orange.png"); }
 
 .screen-5 {
   background-color: #f2f2f2;
@@ -5985,7 +6063,8 @@ p {
     background-color: transparent;
     border: none;
     border-bottom: 1px solid #ff9900;
-    width: 100%; }
+    width: 100%;
+    outline: none; }
   .screen-5 .button {
     margin-top: 50px;
     -webkit-transition: all 0.3s ease-out;
@@ -6001,3 +6080,9 @@ p {
     .screen-5 .button:hover {
       background-color: #ff9900;
       color: #ffffff; }
+
+@media screen and (max-width: 800px) {
+  .screen-4 .sookbox-info-tabs {
+    position: relative; }
+  .screen-4 .sookbox-info-bg, .screen-4 .sookbox-info {
+    display: none; } }

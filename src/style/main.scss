@@ -102,3 +102,14 @@ p {
 @import "vendor/screen-3.scss";
 @import "vendor/screen-4.scss";
 @import "vendor/screen-5.scss";
+
+@media screen and (max-width: 800px){
+	.screen-4 {
+		.sookbox-info-tabs {
+			position: relative;
+		}
+		.sookbox-info-bg , .sookbox-info{
+			display: none;
+		}
+	}
+}

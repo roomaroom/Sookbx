@@ -2,3 +2,4 @@ node_modules/
 layouts/
 assets/
 AI-layouts/
+*.zip

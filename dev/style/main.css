@@ -5806,8 +5806,11 @@ button.close {
     display: none !important; } }
 
 /*# sourceMappingURL=bootstrap.min.css.map */
-.screen-2 .introbox, .screen-4 .sookbox-info-bg {
+.screen-2 .introbox, .screen-4 .sookbox-info-bg, .screen-4 .sookbox-info-tabs {
   box-shadow: 0px 0px 40px 0px #666; }
+
+img {
+  max-width: 100%; }
 
 html {
   font-size: 24px; }
@@ -5815,8 +5818,20 @@ html {
 body {
   font-family: 'Open Sans', sans-serif; }
 
+.cat-space {
+  letter-spacing: 3px; }
+
+.adelle, .screen-2 .text, .screen-3 .text, .screen-4 .cranston-cont .cranston-text, .screen-4 .info-item .text, .screen-5 .copyright, .screen-5 .text, .screen-5 .form-group, .screen-5 .button {
+  font-family: "adelle",serif; }
+
+.filson, .screen-2 .title, .screen-3 .category, .screen-4 .sookbox-info-tabs .title, .screen-4 .info-item .title, .screen-4 .info-item a {
+  font-family: "filson-soft",sans-serif; }
+
 p {
   margin: 0; }
+
+.scroll-to {
+  cursor: pointer; }
 
 .socials .social {
   width: 28px;
@@ -5832,57 +5847,114 @@ p {
   transition: all 0.3s ease-out; }
   .socials .social.facebook {
     background-color: #235b9e;
-    background-image: url("../img/fb.png"); }
+    background-image: url("../img/fb.svg"); }
     .socials .social.facebook:hover {
       background-color: #1e4f89; }
   .socials .social.twitter {
     background-color: #00abe3;
-    background-image: url("../img/twitter.png"); }
+    background-image: url("../img/twitter.svg"); }
     .socials .social.twitter:hover {
       background-color: #0098ca; }
   .socials .social.in {
     background-color: #0074b5;
-    background-image: url("../img/in.png"); }
+    background-image: url("../img/in.svg"); }
     .socials .social.in:hover {
       background-color: #00649c; }
   .socials .social.vimeo {
     background-color: #00b2de;
-    background-image: url("../img/vimeo.png"); }
+    background-image: url("../img/vimeo.svg"); }
     .socials .social.vimeo:hover {
       background-color: #009ec5; }
   .socials .social.youtube {
     background-color: #ff4d3f;
-    background-image: url("../img/youtube.png"); }
+    background-image: url("../img/youtube.svg"); }
     .socials .social.youtube:hover {
       background-color: #ff3526; }
 
-.socials.on-top .social {
+.socials.on-top {
+  float: right;
   display: inline-block; }
+  .socials.on-top .social {
+    display: inline-block; }
 
 .socials.fixed {
   position: fixed;
-  right: 20px;
-  top: 50%;
-  z-index: 9; }
+  top: 30%;
+  z-index: 9;
+  padding: 8px 5px;
+  right: -50px;
+  background-color: #ffffff;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out; }
   .socials.fixed .social {
     display: block;
     margin: 5px 0; }
+  .socials.fixed.active {
+    right: 20px; }
 
 .screen-1 {
   background-color: #333333;
   color: #ffffff;
-  padding-top: 50px; }
-  .screen-1 .header {
-    display: flex; }
+  padding-top: 50px;
+  padding-bottom: 70px; }
+  .screen-1 .logo {
+    float: left; }
+  .screen-1 .phone-container {
+    margin-top: 70px;
+    display: flex;
+    justify-content: initial;
+    position: relative; }
+  .screen-1 .main-text {
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+    font-weight: 600; }
+    .screen-1 .main-text p:first-child {
+      margin-bottom: 60px; }
+    .screen-1 .main-text .highlight {
+      font-weight: 700;
+      color: #ff9900; }
+  .screen-1 .icons-container img {
+    z-index: 5;
+    position: relative; }
+  .screen-1 .icons-container .icons-wrap {
+    background-color: #fff;
+    position: relative; }
+  .screen-1 .icons-container .icons-bg {
+    background-color: #ff9900;
+    position: absolute;
+    z-index: 4;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-image: url("../img/parallax.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center; }
+  .screen-1 .phone {
+    z-index: 5;
+    position: relative; }
 
 .screen-2 {
-  background-color: #ffffff;
   background-color: #f2f2f2;
-  position: relative; }
+  position: relative;
+  z-index: 1; }
+  .screen-2 .main-cont {
+    display: flex;
+    position: relative; }
+  .screen-2 .house-wrap {
+    transform: translateY(-30px);
+    align-self: center; }
   .screen-2 .introbox {
     background-color: #4d4d4d;
     color: #ffffff;
-    padding: 90px 90px 150px; }
+    padding: 90px 90px 120px;
+    box-shadow: 0px 0px 40px 0px #666 , 0px -10px 40px 0px #000;
+    transform: translateY(-30px); }
   .screen-2 .title {
     font-size: .6rem;
     line-height: .8rem;
@@ -5890,21 +5962,51 @@ p {
     text-align: center;
     font-weight: 700;
     margin-bottom: 25px; }
+  .screen-2 img {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto; }
   .screen-2 .text {
     font-size: .6rem;
-    line-height: .8rem; }
+    line-height: .8rem;
+    font-size: .7rem;
+    line-height: .9rem;
+    margin-top: 40px;
+    position: relative; }
   .screen-2 .screen-2-bg-cont {
-    display: none;
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 0; }
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    overflow: hidden; }
     .screen-2 .screen-2-bg-cont .screen-bg {
       padding: 0;
       height: 100%;
-      background-color: #f0f; }
+      background-color: #fff;
+      width: 50% !important;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      transform: rotate(-40deg);
+      right: 0;
+      height: 140%;
+      transform-origin: right top;
+      width: 100% !important; }
+  .screen-2 .arrow-down {
+    width: 62px;
+    height: 62px;
+    display: block;
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    background-repeat: no-repeat;
+    margin-left: -31px;
+    background-image: url("../img/arrow-down-orange.svg"); }
 
 .screen-3 {
   background-color: #ffffff;
@@ -5912,8 +6014,7 @@ p {
   .screen-3 .category {
     font-size: 15px;
     text-transform: uppercase;
-    font-weight: 700;
-    margin-bottom: 30px; }
+    font-weight: 700; }
   .screen-3 .title {
     color: #ff9900;
     font-size: 1.8rem;
@@ -5926,12 +6027,19 @@ p {
       color: #333333;
       position: absolute;
       bottom: -20px;
-      left: 50%; }
+      left: 50%;
+      font-size: inherit;
+      position: absolute;
+      left: 50%;
+      bottom: -40px;
+      margin-left: -5px; }
   .screen-3 .highlight {
+    font-weight: 700;
     color: #ff9900; }
   .screen-3 .text {
     font-size: 1rem;
-    line-height: 1.2rem; }
+    line-height: 1.2rem;
+    font-weight: 400; }
 
 .screen-4 {
   background-color: #f2f2f2;
@@ -5955,7 +6063,8 @@ p {
     text-align: center; }
     .screen-4 .sookbox-info-tabs .arrow-down {
       content: "";
-      background-image: url("../img/arrow-down.png");
+      background-repeat: no-repeat;
+      background-image: url("../img/arrow-down.svg");
       cursor: pointer;
       position: absolute;
       top: 50px;
@@ -5967,7 +6076,15 @@ p {
       font-weight: 700;
       text-transform: uppercase;
       font-size: .6rem;
-      margin-bottom: 80px; }
+      margin-bottom: 80px;
+      position: relative; }
+      .screen-4 .sookbox-info-tabs .title:after {
+        color: inherit;
+        font-size: inherit;
+        position: absolute;
+        left: 50%;
+        bottom: -40px;
+        margin-left: -5px; }
     .screen-4 .sookbox-info-tabs .tab {
       font-size: 1.8rem;
       margin-bottom: 40px;
@@ -5980,7 +6097,8 @@ p {
         .screen-4 .sookbox-info-tabs .tab span:after {
           content: "";
           background-repeat: no-repeat;
-          background-image: url("../img/arrow-left.png");
+          background-image: url("../img/arrow-left.svg");
+          background-repeat: no-repeat;
           width: 29px;
           height: 28px;
           display: block;
@@ -6005,6 +6123,34 @@ p {
     left: 0;
     height: 530px;
     z-index: 1; }
+  .screen-4 .cranston-cont {
+    position: relative; }
+    .screen-4 .cranston-cont:before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: #f1f1f1; }
+    .screen-4 .cranston-cont .cranston-text {
+      position: absolute;
+      background-color: #ff9900;
+      top: calc(100% - 100px);
+      left: calc(100% - 100px);
+      width: 135px;
+      color: #ffffff;
+      padding: 20px 15px;
+      font-size: .5rem;
+      line-height: .8rem; }
+      .screen-4 .cranston-cont .cranston-text a {
+        display: inline;
+        color: inherit;
+        text-transform: none;
+        padding: 0;
+        text-decoration: underline; }
   .screen-4 .info-item {
     width: calc( 100% + 35px);
     height: 100%;
@@ -6041,24 +6187,45 @@ p {
       text-decoration: none;
       background-repeat: no-repeat;
       background-position: 0 center;
-      background-image: url("../img/arrow-left-orange.png"); }
+      background-image: url("../img/arrow-left-orange.svg");
+      background-repeat: no-repeat; }
+      .screen-4 .info-item a:hover {
+        animation: link-arrow .3s; }
+
+@keyframes link-arrow {
+  0% {
+    background-position: 0 center; }
+  50% {
+    background-position: 5px center; }
+  100% {
+    background-position: 0 center; } }
 
 .screen-5 {
   background-color: #f2f2f2;
   padding: 20px 0; }
   .screen-5 .copyright {
     margin: 50px 0 0; }
+  .screen-5 .socials.on-top {
+    float: none;
+    margin: 50px auto 0;
+    display: block;
+    text-align: center; }
   .screen-5 .title {
     color: #ff9900;
     font-size: 1.3rem;
     line-height: 1.4rem;
-    margin-bottom: 30px; }
+    margin-bottom: 30px;
+    font-weight: 600; }
   .screen-5 .text {
     font-size: .6rem;
     line-height: .8rem;
     margin-bottom: 30px; }
+    .screen-5 .text a {
+      color: #333333;
+      text-decoration: none; }
   .screen-5 .form-group label {
-    display: block; }
+    display: block;
+    font-weight: 400; }
   .screen-5 .form-group input {
     background-color: transparent;
     border: none;
@@ -6075,14 +6242,101 @@ p {
     border: 1px solid #ff9900;
     background-color: transparent;
     height: 60px;
-    line-height: 60px;
     border-radius: 10px; }
     .screen-5 .button:hover {
       background-color: #ff9900;
       color: #ffffff; }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 992px) {
+  html {
+    font-size: 19px; }
+  .screen-1 .logo {
+    float: none;
+    margin: 0 auto;
+    display: block; }
+  .screen-1 .main-text p:first-child {
+    margin-bottom: 20px; }
+  .screen-1 .phone {
+    margin: 0 auto; }
+  .screen-1 .icons-container {
+    text-align: center; }
+  .screen-1 .icons-wrap {
+    display: inline-block; }
+  .screen-1 .main-text {
+    width: 290px;
+    display: block;
+    margin: 0 auto;
+    left: 50%;
+    margin-left: -145px;
+    top: 85px;
+    position: absolute;
+    z-index: 1;
+    width: 250px;
+    margin-left: -125px; }
+  .screen-2 .main-cont {
+    display: block; }
+  .screen-2 .introbox {
+    padding: 10px 20px 80px; }
+  .screen-2 .house {
+    float: left;
+    margin-left: -15px; }
+  .screen-2 .house-wrap {
+    transform: translateY(0px); }
+  .screen-2 .screen-bg-2, .screen-2 .screen-bg {
+    height: 50%; }
+  .screen-2 .screen-2-bg-cont .screen-bg {
+    transform-origin: right center;
+    transform: rotate(60deg);
+    height: 240%; }
+  .screen-3 {
+    padding: 50px 0 120px; }
+  .screen-4 .info-item {
+    padding: 70px 40px; }
   .screen-4 .sookbox-info-tabs {
-    position: relative; }
-  .screen-4 .sookbox-info-bg, .screen-4 .sookbox-info {
+    position: relative;
+    top: 0; }
+  .screen-4 .sookbox-info-bg {
+    display: none; }
+  .screen-4 .sookbox-info {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 0;
+    background-color: #fff;
+    height: 100%;
+    z-index: -15; }
+    .screen-4 .sookbox-info.mobile-active {
+      z-index: 15; }
+    .screen-4 .sookbox-info .close-mobile {
+      width: 18px;
+      height: 18px;
+      background-image: url("../img/close.png");
+      cursor: pointer;
+      position: absolute;
+      top: 15px;
+      right: 15px; }
+    .screen-4 .sookbox-info:before {
+      content: "";
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      top: 0;
+      right: 0;
+      z-index: -1; }
+  .screen-4 .info-item {
+    background-color: #fff;
+    z-index: 10; }
+  .socials.fixed {
     display: none; } }
+
+#canvaser {
+  position: relative; }
+  #canvaser canvas {
+    width: 100% !important;
+    height: 100% !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; }

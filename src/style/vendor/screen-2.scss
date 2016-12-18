@@ -1,14 +1,25 @@
 .screen-2 {
 	// display: none;
-	background-color: $light-text;
+	// background-color: $light-text;
 	background-color: $grey;
 	position: relative;
+	z-index: 1;
+	// overflow-x: hidden;
+	.main-cont {
+		display: flex;
+		position: relative;
+	}
+	.house-wrap {
+		transform: translateY(-30px);
+		align-self: center;
+	}
 	.introbox {
 		background-color: #4d4d4d;
 		color: $light-text;
-		padding: 90px 90px 150px;
-		// box-shadow: 0px 0px 40px 0px #666;
+		padding: 90px 90px 120px;
 		@extend %shadow;
+		box-shadow: 0px 0px 40px 0px #666 , 0px -10px 40px 0px #000;
+		transform: translateY(-30px);
 	}
 	.title {
 		font-size: .6rem;
@@ -17,23 +28,70 @@
 		text-align: center;
 		font-weight: 700;
 		margin-bottom: 25px;
+		@extend .filson;
+	}
+	img {
+		display: block;
+		max-width: 100%;
+		margin: 0 auto;
 	}
 	.text {
 		font-size: .6rem;
 		line-height: .8rem;
+		font-size: .7rem;
+		line-height: .9rem;
+		margin-top: 40px;
+		position: relative;		
+		@extend .adelle;
+		&:after {
+			// content: "-";	
+			// color: inherit;
+			// position: absolute;
+			// bottom: -20px;
+			// left: 50%;
+			// content: "-";
+			// font-size: inherit;
+			// position: absolute;
+			// left: 50%;
+			// top: -35px;
+			// margin-left: -5px;
+		}
 	}
 	.screen-2-bg-cont {
-		display: none;
 		position: absolute;
 		top: 0;
 		bottom: 0;
 		left: 0;
 		right: 0;
 		padding: 0;
+		height: 100%;
+		width: 100%;
+		z-index: -1;
+		overflow: hidden;
 		.screen-bg {
 			padding: 0;
 			height: 100%;
-			background-color: #f0f;
+			background-color: #fff;
+			width: 50% !important;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			transform: rotate(-40deg);
+			right: 0;
+			height: 140%;
+			transform-origin: right top;
+			width: 100% !important;
 		}
+	}
+	.arrow-down {
+		width: 62px;
+		height: 62px;
+		display: block;
+		position: absolute;
+		bottom: -30px;
+		left: 50%;
+		background-repeat: no-repeat;
+		margin-left: -31px;
+		background-image: url('../img/arrow-down-orange.svg');
 	}
 }

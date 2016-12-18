@@ -2,47 +2,71 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title></title>
+	<title>Sookbox</title>
+	<link rel="icon" type="image/png" href="img/sookbox-favicon.png" />
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
-	<script src="https://use.typekit.net/yjo6zlt.js"></script>
-	<script>try{Typekit.load({ async: true });}catch(e){}</script>
 	<link rel="stylesheet" href="style/main.css">
 </head>
 <body>
-<div class="socials fixed">
-		<a href="#" target="blank" class="social facebook"></a>
-		<a href="#" target="blank" class="social twitter"></a>
-		<a href="#" target="blank" class="social in"></a>
-		<a href="#" target="blank" class="social vimeo"></a>
-		<a href="#" target="blank" class="social youtube"></a>
+<div class="socials fixed" id="socials-fixed">
+		<a href="https://www.facebook.com/sookbox" target="blank" class="social facebook"></a>
+		<a href="https://twitter.com/TheSookBox" target="blank" class="social twitter"></a>
+		<a href="http://www.linkedin.com/company/sookbox-llc" target="blank" class="social in"></a>
+		<a href="http://vimeo.com/sookbox" target="blank" class="social vimeo"></a>
+		<a href="http://www.youtube.com/user/Sookbox" target="blank" class="social youtube"></a>
 	</div>
 	<div class="screen screen-1">
 		<div class="header container">
-			<img src="img/logo.png" alt="Logo" class="logo">
-			<div class="socials on-top">
-				<a href="#" target="blank" class="social facebook"></a>
-				<a href="#" target="blank" class="social twitter"></a>
-				<a href="#" target="blank" class="social in"></a>
-				<a href="#" target="blank" class="social vimeo"></a>
-				<a href="#" target="blank" class="social youtube"></a>
+			<img src="img/logo.svg" alt="Logo" class="logo">
+			<div class="socials on-top hidden-xs hidden-sm">
+				<a href="https://www.facebook.com/sookbox" target="blank" class="social facebook"></a>
+				<a href="https://twitter.com/TheSookBox" target="blank" class="social twitter"></a>
+				<a href="http://www.linkedin.com/company/sookbox-llc" target="blank" class="social in"></a>
+				<a href="http://vimeo.com/sookbox" target="blank" class="social vimeo"></a>
+				<a href="http://www.youtube.com/user/Sookbox" target="blank" class="social youtube"></a>
 			</div>
 		</div>
 		<div class="container">
-			
-			<p class="title">Sookbox</p>
-			<p class="title">Today, you can control anything and everything from your phone or tablet.</p>
-			<p class="title">We pioneered that.</p>
+			<div class="phone-container">
+				<div class="col-md-2 col-md-offset-3 scroll-to phone" data-scroll-to="screen-2">
+					<!-- <img src="img/phone.png" alt="phone image"> -->
+					<picture>
+						<source srcset="img/phone-mobile.svg" media="(max-width: 992px)">
+						<source srcset="img/phone.svg">
+						<img src="img/phone.svg" alt="phone">
+					</picture>
+				</div>
+				<div class="col-lg-3 col-md-6 col-md-offset-1 main-text">
+					<p class="title">Today, you can control anything and everything from your phone or tablet.</p>
+					<p class="title highlight">We pioneered that.</p>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="icons-container col-md-10 col-md-offset-1">
+				<div class="icons-wrap">	
+					<!-- <img src="img/icons-sx.png" alt="" id="icons"> -->
+					<picture id="icons">
+						<source srcset="img/icons-sx-mobile.svg" media="(max-width: 992px)">
+						<source srcset="img/icons.svg">
+						<img src="img/icons.svg" alt="phone">
+					</picture>
+					<div class="icons-bg"></div>
+				</div>
+			</div>
 		</div>
 	</div>
 	<div class="screen screen-2">
-		<div class="container">
+		<div class="container main-cont">
 			<div class="col-md-5 col-md-offset-1 introbox">
-				<div class="title">introducing:</div>
-				<p class="text">How do we get devices to communicate with each other? How do we govern our universe of content? How do we transform handhelds into controllers that send chosen media to desired output device? Sookbox answers these questions creating a new paradigm - a universal framework to connect and control media on all devices. Sookbox breaks from tradition in two ways: first to put a cloud in the home, and second to serve content and controls separately.</p>
+				<div class="title cat-space">introducing:</div>
+				<img src="img/sookbox-info.png" alt="">
+				<p class="text text-center">How do we get devices to communicate with each other? How do we govern our universe of content? How do we transform handhelds into controllers that send chosen media or actions to desired output devices, and get feedback in return? Sookbox answers these questions by creating a new paradigm - a universal framework to connect and control all devices. Sookbox catalyzes a personal cloud connecting all of a user’s devices in one place, with multidirectional control and feedback. </p>
+				<div class="arrow-down scroll-to" data-scroll-to="screen-3"></div>
 			</div>
-			<div class="col-md-5">
+			<div class="col-md-5 house-wrap">
 				<div class="row">			
-					<img src="img/house.png" alt="">
+					<img src="img/house.png" class="house" alt="">
+					<div class="clearfix"></div>
 				</div>
 			</div>
 		</div>
@@ -53,9 +77,9 @@
 	<div class="screen screen-3">
 		<div class="container text-center">
 			<div class="col-md-6 col-md-offset-3">
-				<p class="category">patented</p>
+				<p class="category cat-space">patented</p>
 				<p class="title">innovation</p>
-				<p class="text">Sookbox broke the traditional linear paradigm of one controller connected to one device connected to one output with the invention of the Stream Runner. We separate content from control with a framework that enables consumers to play any media or apps on multiple outputs. This is novel. There are <span class="highlight">two patents</span> we were just awarded, as well as several provisional patents for corollary innovations.</p>
+				<p class="text">Sookbox broke the traditional linear paradigm of one controller connected to one device connected to one output. We separate content from control with a framework that enables users to play any media or apps on multiple outputs, or control any IP-enabled device, using multiple controllers each getting the same or distinct feedback. This is novel. <span class="highlight scroll-to" data-scroll-to="screen-4">Two patents</span> have been awarded, as well as others pending, that cover the broad spectrum of Sookbox innovation.</p>
 			</div>
 			<div class="clearfix"></div>
 		</div>
@@ -65,8 +89,8 @@
 			<div class="col-md-9 col-md-offset-1 sookbox-info-bg">
 			</div>
 			<div class="col-md-5 col-md-offset-6 col-sm-12 sookbox-info-tabs">
-				<div class="arrow-down"></div>
-				<p class="title">learn more</p>
+				<div class="arrow-down scroll-to" data-scroll-to="screen-4"></div>
+				<p class="title cat-space">learn more</p>
 				<div class="tabs">
 					<p class="tab active" data-tab="patents"><span>patents</span></p>
 					<p class="tab" data-tab="history"><span>history</span></p>
@@ -74,15 +98,16 @@
 				</div>
 			</div>
 			<div class="col-md-5 col-md-offset-1 sookbox-info">
+				<div class="close-mobile" id="close-mobile"></div>
 				<div class="info-item active" id="patents">
 					<p class="cat-title">Sookbox Patents</p>
 					<p class="title">proven innovation</p>
 					<p class="text">Sookbox has been issued patents that cover its innovative technology. The disclosure is broad, and includes novel concepts such as multi-directional feedback amongst various devices on a network, control of multiple devices from multiple handheld, and the treatment of connectivity information for discrete and non-discrete controllers. In the real-world, this technology is widely applicable to streaming devices, smart devices, dumb devices made smart, home automation and control, and the comprehensive Internet of Things.</p>
-					<a href="#">US Patent 9,503,486: Configuring, Networking, and Controlling a Plurality of Unique Network-Capable Devices</a>
-					<a href="#">US Patent 9,497,137: Digital Content Connectivity and Control via a Plurality of Controller that are Treated Discriminatively</a>
+					<a target="blank" href="http://pdfpiw.uspto.gov/.piw?Docid=09503486">US Patent 9,503,486: Configuring, Networking, and Controlling a Plurality of Unique Network-Capable Devices</a>
+					<a target="blank" href="http://pdfpiw.uspto.gov/.piw?Docid=09497137">US Patent 9,497,137: Digital Content Connectivity and Control via a Plurality of Controller that are Treated Discriminatively</a>
 					<p class="title">PATENT PUBLICATIONS</p>
-					<a href="#">Method and System for Providing Digital Content</a>
-					<a href="#">Digital Content Connectivity and Control via a Plurality of Controllers that are treated as a Single Controller</a>
+					<a target="blank" href="http://pdfaiw.uspto.gov/.aiw?PageNum=0&docid=20140195587">Method and System for Providing Digital Content</a>
+					<a target="blank" href="http://pdfaiw.uspto.gov/.aiw?PageNum=0&docid=20140331135">Digital Content Connectivity and Control via a Plurality of Controllers that are treated as a Single Controller</a>
 				</div>
 				<div class="info-item" id="history">
 					<p class="cat-title">Sookbox History</p>
@@ -93,10 +118,15 @@
 				<div class="info-item" id="media">
 					<p class="cat-title">Sookbox Media</p>
 					<p class="title">VideoS</p>
-					<a href="#">Sneak Peek Into Sookbox's Digital Media Unleashed - Verizon MIT Meet-Up</a>
-					<a href="#">Sookbox presents at Boston New Technology</a>
+					<a target="blank" href="https://www.youtube.com/watch?v=X6audE4ymWg">Sneak Peek Into Sookbox's Digital Media Unleashed - Verizon MIT Meet-Up</a>
+					<a target="blank" href="https://www.youtube.com/watch?v=fefeQHgz4cg">Sookbox presents at Boston New Technology</a>
 					<p class="title">ImageS</p>
-					<img src="img/cranston.jpg" alt="">
+					<div class="cranston-cont">	
+						<img src="img/cranston.jpg" alt="">
+						<div class="cranston-text">
+							<p>Bryan Cranston is a big fan of Sookbox! Read the full article <a target="blank" href="http://www.celebuzz.com/photos/miranda-kerr-ryan-phillippe-and-more-beyond-the-velvet-rope/bryan-cranston-with-sookbox/" target="blank">here</a>.</p>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -120,14 +150,24 @@
 						<label for="">Email:</label>
 						<input type="email">
 					</div>
-					<button type="submit" class="button col-md-6 col-md-offset-6">Sign Up</button>
+					<button type="submit" class="button col-md-6 col-md-offset-6 col-xs-6 col-xs-offset-3">Sign Up</button>
 				</form>
 			</div>
 			<div class="clearfix"></div>
+	
+			<div class="socials on-top hidden-md hidden-lg">
+				<a href="https://www.facebook.com/sookbox" target="blank" class="social facebook"></a>
+				<a href="https://twitter.com/TheSookBox" target="blank" class="social twitter"></a>
+				<a href="http://www.linkedin.com/company/sookbox-llc" target="blank" class="social in"></a>
+				<a href="http://vimeo.com/sookbox" target="blank" class="social vimeo"></a>
+				<a href="http://www.youtube.com/user/Sookbox" target="blank" class="social youtube"></a>
+			</div>
 			<p class="copyright text-center">© Copyright 2013 Sookbox. All Rights Reserved.</p>
 		</div>
 	</div>
-	<div class="popup" id="popup"></div>
+	<div class="popup" id="popup popup-1"></div>
 	<script src="js/main.js"></script>
+	<script src="https://use.typekit.net/yjo6zlt.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
 	</body>
 	</html>

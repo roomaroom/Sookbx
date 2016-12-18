@@ -3,21 +3,36 @@
 	padding: 20px 0;
 	.copyright {
 		margin: 50px 0 0;
+		@extend .adelle;
+	}
+	.socials.on-top {
+		float: none;
+		margin: 50px auto 0;
+		display: block;
+		text-align: center;
 	}
 	.title {
 		color: $main;
 		font-size: 1.3rem;
 		line-height: 1.4rem;
 		margin-bottom: 30px;
+		font-weight: 600;
 	}
 	.text {
 		font-size: .6rem;
 		line-height: .8rem;
 		margin-bottom: 30px;
+		@extend .adelle;
+		a {
+			color: $dark-text;
+			text-decoration: none;
+		}
 	}
 	.form-group {
+		@extend .adelle;
 		label {
 			display: block;
+			font-weight: 400;
 		}
 		input {
 			background-color: transparent;
@@ -29,11 +44,12 @@
 	}
 	.button {
 		margin-top: 50px;
+		@extend .adelle;
 		@include transition;
 		border: 1px solid $main;
 		background-color: transparent;
 		height: 60px;
-		line-height: 60px;
+		// line-height: 60px;
 		@include radius(10px);
 		&:hover {
 			background-color: $main;

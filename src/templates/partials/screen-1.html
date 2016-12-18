@@ -1,18 +1,40 @@
 <div class="screen screen-1">
 	<div class="header container">
-		<img src="img/logo.png" alt="Logo" class="logo">
-		<div class="socials on-top">
-			<a href="#" target="blank" class="social facebook"></a>
-			<a href="#" target="blank" class="social twitter"></a>
-			<a href="#" target="blank" class="social in"></a>
-			<a href="#" target="blank" class="social vimeo"></a>
-			<a href="#" target="blank" class="social youtube"></a>
+		<img src="img/logo.svg" alt="Logo" class="logo">
+		<div class="socials on-top hidden-xs hidden-sm">
+			<a href="https://www.facebook.com/sookbox" target="blank" class="social facebook"></a>
+			<a href="https://twitter.com/TheSookBox" target="blank" class="social twitter"></a>
+			<a href="http://www.linkedin.com/company/sookbox-llc" target="blank" class="social in"></a>
+			<a href="http://vimeo.com/sookbox" target="blank" class="social vimeo"></a>
+			<a href="http://www.youtube.com/user/Sookbox" target="blank" class="social youtube"></a>
 		</div>
 	</div>
 	<div class="container">
-		
-		<p class="title">Sookbox</p>
-		<p class="title">Today, you can control anything and everything from your phone or tablet.</p>
-		<p class="title">We pioneered that.</p>
+		<div class="phone-container">
+			<div class="col-md-2 col-md-offset-3 scroll-to phone" data-scroll-to="screen-2">
+				<!-- <img src="img/phone.png" alt="phone image"> -->
+				<picture>
+					<source srcset="img/phone-mobile.svg" media="(max-width: 992px)">
+					<source srcset="img/phone.svg">
+					<img src="img/phone.svg" alt="phone">
+				</picture>
+			</div>
+			<div class="col-lg-3 col-md-6 col-md-offset-1 main-text">
+				<p class="title">Today, you can control anything and everything from your phone or tablet.</p>
+				<p class="title highlight">We pioneered that.</p>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="icons-container col-md-10 col-md-offset-1">
+			<div class="icons-wrap">	
+				<!-- <img src="img/icons-sx.png" alt="" id="icons"> -->
+				<picture id="icons">
+					<source srcset="img/icons-sx-mobile.svg" media="(max-width: 992px)">
+					<source srcset="img/icons.svg">
+					<img src="img/icons.svg" alt="phone">
+				</picture>
+				<div class="icons-bg"></div>
+			</div>
+		</div>
 	</div>
 </div>

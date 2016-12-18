@@ -14,6 +14,9 @@ $grey: #f2f2f2;
 %shadow {
 	box-shadow: 0px 0px 40px 0px #666;
 }
+img {
+	max-width: 100%;
+}
 @mixin transition($args: all, $time: 0.3s, $easing: ease-out) {
 	-webkit-transition: $args $time $easing;
 	-moz-transition: $args $time $easing;
@@ -30,8 +33,20 @@ html {
 body {
 	font-family: 'Open Sans', sans-serif;
 }
+.cat-space {
+	letter-spacing: 3px;
+}
+.adelle {
+	font-family:"adelle",serif;
+}
+.filson {
+	font-family:"filson-soft",sans-serif;
+}
 p {
 	margin: 0;
+}
+.scroll-to {
+	cursor: pointer;
 }
 
 .socials {
@@ -45,53 +60,62 @@ p {
 		@include transition;
 		&.facebook {
 			background-color: #235b9e;
-			background-image: url('../img/fb.png');
+			background-image: url('../img/fb.svg');
 			&:hover {
 				background-color: darken(#235b9e, 5%);
 			}
 		}
 		&.twitter {
 			background-color: #00abe3;
-			background-image: url('../img/twitter.png');
+			background-image: url('../img/twitter.svg');
 			&:hover {
 				background-color: darken(#00abe3, 5%);
 			}
 		}
 		&.in {
 			background-color: #0074b5;
-			background-image: url('../img/in.png');
+			background-image: url('../img/in.svg');
 			&:hover {
 				background-color: darken(#0074b5, 5%);
 			}
 		}
 		&.vimeo {
 			background-color: #00b2de;
-			background-image: url('../img/vimeo.png');
+			background-image: url('../img/vimeo.svg');
 			&:hover {
 				background-color: darken(#00b2de, 5%);
 			}
 		}
 		&.youtube {
 			background-color: #ff4d3f;
-			background-image: url('../img/youtube.png');
+			background-image: url('../img/youtube.svg');
 			&:hover {
 				background-color: darken(#ff4d3f, 5%);
 			}
 		}
 	}
 	&.on-top {
+		float: right;
+		display: inline-block;
 		.social {
 			display: inline-block;
 		}
 	}
 	&.fixed {
 		position: fixed;
-		right: 20px;
-		top: 50%;
+		top: 30%;
 		z-index: 9;
+		padding: 8px 5px;
+		right: -50px;
+		background-color: #ffffff;
+		@include transition;
 		.social {
 			display: block;
 			margin: 5px 0;
+		}
+		&.active {
+			right: 20px;
+			// display: block;
 		}
 	}
 }
@@ -103,13 +127,129 @@ p {
 @import "vendor/screen-4.scss";
 @import "vendor/screen-5.scss";
 
-@media screen and (max-width: 800px){
-	.screen-4 {
-		.sookbox-info-tabs {
-			position: relative;
+@media screen and (max-width: 992px){
+	html {
+		font-size: 19px;
+	}
+	.screen-1 {
+		.logo {
+			float: none;
+			margin: 0 auto;
+			display: block;
 		}
-		.sookbox-info-bg , .sookbox-info{
-			display: none;
+		.main-text p:first-child {
+			margin-bottom: 20px;
+		}
+		.phone {
+			margin: 0 auto;
+		}
+		.icons-container {
+			text-align: center;
+		}
+		.icons-wrap {
+			display: inline-block;
+		}
+		.main-text {
+			width: 290px;
+			display: block;
+			margin: 0 auto;
+			left: 50%;
+			margin-left: -145px;
+			top: 85px;
+			position: absolute;
+			z-index: 1;
+
+			width: 250px;
+			margin-left: -125px;
 		}
 	}
+	.screen-2 {
+		.main-cont {
+			display: block;
+		}
+		.introbox {
+			padding: 10px 20px 80px;
+		}
+		.house {
+			float: left;
+			margin-left: -15px;
+		}
+		.house-wrap {
+			transform: translateY(0px);
+		}
+		.screen-bg-2 , .screen-bg {
+			height: 50%;
+		}
+		.screen-2-bg-cont .screen-bg {
+			transform-origin: right center;
+			transform: rotate(60deg);
+			height: 240%;
+		}
+	}
+	.screen-3 {
+		padding: 50px 0 120px;
+	}
+	.screen-4 {
+		.info-item {
+			padding: 70px 40px;
+		}
+		.sookbox-info-tabs {
+			position: relative;
+			top: 0;
+		}
+		.sookbox-info-bg {
+			display: none;
+		}
+		.sookbox-info {
+			position: fixed;
+			top: 10px;
+			left: 10px;
+			right: 10px;
+			bottom: 0;
+			background-color: #fff;
+			height: 100%;
+			z-index: -15;
+			&.mobile-active {
+				z-index: 15;
+			}
+			.close-mobile {
+				width: 18px;
+				height: 18px;
+				background-image: url('../img/close.png');
+				cursor: pointer;
+				position: absolute;
+				top: 15px;
+				right: 15px;
+			}
+			&:before {
+				content: "";
+				position: fixed;
+				left: 0;
+				bottom: 0;
+				top: 0;
+				right: 0;
+				// background-color: #333;
+				z-index: -1;
+			}
+		}
+		.info-item {
+			background-color: #fff;
+			z-index: 10;
+		}
+	}
+	.socials.fixed {
+		display: none;
+	}
 }
+
+#canvaser {
+	position: relative;
+	canvas {
+		width: 100% !important;
+		height: 100% !important;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}}

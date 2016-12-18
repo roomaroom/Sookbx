@@ -103,6 +103,7 @@ gulp.task('js:build', function () {
     gulp.src([
         'src/js/vendor/jquery-3.1.1.min.js',
         'src/js/vendor/bootstrap.min.js',
+        'src/js/vendor/jquery.waypoints.min.js',
         'src/js/main.js',
         ])
     .pipe(concatjs('main.js')).on('error', swallowError)

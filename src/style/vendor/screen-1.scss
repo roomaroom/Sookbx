@@ -2,7 +2,58 @@
 	background-color: #333333;
 	color: $light-text;
 	padding-top: 50px;
+	padding-bottom: 70px;
 	.header {
+	}
+	.logo {
+		float: left;
+	}
+	.phone-container {
+		margin-top: 70px;
 		display: flex;
+		justify-content: initial;
+		// align-items: flex-end;
+		position: relative;
+	}
+	.main-text {
+		font-size: 1.3rem;
+		line-height: 1.5rem;
+		font-weight: 600;
+		p:first-child {
+			margin-bottom: 60px;
+		}
+		.highlight {
+			font-weight: 700;
+			color: $main;
+		}
+	}
+	.icons-container {
+		img {	
+			z-index: 5;
+			position: relative;		
+		}
+		.icons-wrap {
+			background-color: #fff;
+			position: relative;
+		}
+		.icons-bg {
+			background-color: $main;
+			position: absolute;
+			z-index: 4;
+			top: 0;
+			left: 0;
+			right: 0;
+			height: 100%;
+
+			background-repeat: no-repeat;
+			background-image: url('../img/parallax.jpg');
+			background-size: cover;
+			background-attachment: fixed;
+			background-position: center;
+		}
+	}
+	.phone {
+		z-index: 5;
+		position: relative;
 	}
 }

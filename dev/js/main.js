@@ -79,3 +79,24 @@ function Bert (ert){
 		infoboxHeight();
 	});
 });
+
+/* attach a submit handler to the form */
+$("#google-form").submit(function(event) {
+
+  /* stop form from submitting normally */
+  event.preventDefault();
+
+  /* get the action attribute from the <form action=""> element */
+  var $form = $( this ),
+      url = $form.attr( 'action' );
+
+  /* Send the data using post with element id form-name and form-email*/
+	$.ajax({
+	    url: url,
+	    data: { 'entry.1240281470': $('#form-name').val(), 'entry.1559788230': $('#form-email').val() },
+	    type: 'POST',
+			dataType: "xml",
+	    complete: function() { location.reload(); },
+	});
+
+});

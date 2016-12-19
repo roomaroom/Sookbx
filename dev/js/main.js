@@ -31,6 +31,7 @@ tabTrigger.on("click", function(){
 		$(".sookbox-info").addClass("mobile-active");
 	}
 });
+
 $("#close-mobile").on("click", function(){
 	$(".sookbox-info").removeClass("mobile-active");
 });
@@ -69,11 +70,9 @@ function Bert (ert){
 	var scrollDown = $(".scroll-to");
 	scrollDown.on("click", function(){
 		var thisAnchor = $(this).data("scroll-to");
-	// console.log
 	$('html, body').animate({
 		scrollTop: $("." + thisAnchor).offset().top
 	}, 1000)
-	// Bert("wat");
 
 });
 	$(window).on("resize", function(){

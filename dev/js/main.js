@@ -93,7 +93,7 @@ $("#google-form").submit(function(event) {
   /* Send the data using post with element id form-name and form-email*/
 	$.ajax({
 	    url: url,
-	    data: { 'entry.1240281470': $('#form-name').val(), 'entry.1559788230': $('#form-email').val() },
+	    data: { 'entry.1461275830': $('#form-name').val(), 'entry.465169298': $('#form-email').val() },
 	    type: 'POST',
 			dataType: "xml",
 	    complete: function() { location.reload(); },
